@@ -1,0 +1,164 @@
+@charset "utf-8"; 
+
+
+/* 반응형 모달 */
+@keyframes slidefade {
+  0% {
+    opacity: 0;
+    margin-top: -100px;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+.modal.active, .modal2.active {display: block;}
+
+.modal, .modal2{
+  display:none; 
+	justify-content: center;
+  align-items: center;
+	position:fixed; 
+	left:0; 
+	top:0;
+	width:100%; 
+	height:100vh; 
+	margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10rem);
+	overflow: hidden;
+	z-index:1000; 
+}
+
+.modal-box, .modal-box2 {
+  width: 90%;
+  max-width: 140rem;
+  height: 90vh;
+	margin: auto;
+	overflow-y: auto;
+}
+
+.modal-content, .modal-content2 {
+  overflow-y: auto;
+  max-height: 100%;
+  padding: 0;
+}
+
+.modal-content li{
+	display: none;
+}
+.modal-content li.active,
+.modal-content2 .active{
+	display: block;
+}
+
+.viewpage,
+.viewpage2{
+	height: 100%;
+	margin: auto;
+	display: flex;
+	align-items: flex-start;
+}
+.modal .viewpage img,
+.modal2 .viewpage2 img {
+	width: 100%;
+  max-width: 140rem;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+
+.scroll{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.8rem;
+	font-size: 1.2rem;
+	z-index:2000; 
+}
+
+.scroll2{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.8rem;
+	font-size: 1.2rem;
+	z-index:2000; 
+	position: absolute;
+	left: 0;
+}
+
+@keyframes scroll {
+	70%{transform: translateY(0.5rem);}
+	100%{transform: translateY(0.1rem);}
+}
+.scroll i, .scroll2 i{
+	animation: scroll 1s infinite ease-out;
+}
+
+/*버튼영역_______________________________*/ 
+.modal-btn{
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	right: 7rem;
+	top: 14rem;
+	width: 8rem;
+	color:#fff;
+	text-align:center;
+	z-index:2000;
+}
+
+.close, .close2{ /*닫기*/
+	position:fixed; 
+	right:7rem; 
+	top:3rem; 
+	width: 8rem;
+	text-align: center;
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon{
+	color:#666; 
+}
+
+.close i, .close2 i{font-size: 3rem;}
+.close:hover, .close2:hover{
+	transform: translateY(0.3rem);
+	opacity: 0.6;
+}
+
+
+.lr-btn{
+	display: flex;
+	justify-content: center;
+	color: #666;
+	position: fixed;
+	right: 7rem;
+	top:10rem;
+	width:8rem;
+	z-index: 2000;
+}
+.lr-btn i{
+	font-size: 28px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.lr-btn i:hover{
+	transform: translateY(0.3rem);
+	opacity: 0.8;
+}
+.page-num{ 
+	font-size:12px;
+	color:#666;
+	text-align:center;
+}
