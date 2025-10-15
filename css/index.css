@@ -241,7 +241,7 @@ h1{
 
 .profile-1{
   padding: 2rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .profile-depth{
@@ -254,7 +254,7 @@ h1{
   display: flex;
   border-radius: 0.5rem;
   padding: 0 2rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .profile-info-set i{
   font-size: 2.4rem;
@@ -321,6 +321,19 @@ h1{
   top: 135%;
   position: absolute;
 }
+
+.linkedin-icon img {
+  width: 28px;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.linkedin-icon:hover img {
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.6)); /* 오른쪽 아래 진한 그림자 */
+  transform: scale(1.05);
+}
+
 .skills{
   display: flex;
   gap: 1rem;
@@ -537,7 +550,7 @@ h1{
 #graphic{
   height: 150vh;
   padding: 5rem 0;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 .items{ 
 	margin:0 auto; 
